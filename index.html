@@ -2,27 +2,29 @@
 <html lang="en">
     <head>
      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="styles.css">
-        <title>Personal Web</title>
+        <script src="script.js" defer></script>
+        <title>Backend Development Student</title>
     </head>
 
+    <!-- Menu incial y enlaces--> 
     <body>
       <header>
-      <div> 
-         <nav>
-            <a>LOGO</a>
-            <ul>
+       <nav class="container">
+          <div>LOGO</div>
+            <ul class="nav-links">
               <li><a href="./index.html">Home</a></li>
               <li><a href="./about/index.html">About</a></li>
               <li><a href="./Portfolio/index.html">Portfolio</a></li>
             </ul>
-            <a href="./contact/index.html">Let´s Talk</a>
-         </nav>
-       </div>
-</header>
+            <a href="./contact/index.html" class="cta-btn">Let´s Talk</a>
+       </nav>   
+      </header>
 
-<section>
-          <div>
+    <!-- Presentación inicial-->
+<section class="hero" id="home">
+          <div class="container">
            <h1>Boris Cucho</h1>
            <h2>BackEnd Development Student</h2>
            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
@@ -32,18 +34,76 @@
           </div>
 </section>
 
-<section>       
-<h1>My latest projects</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+<!-- Portfolio Section -->
+<section class="section" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">My latest projects</h2>
+            <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Technical Documentation Page</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\03-Technical-Documentation-Page\index.html">
+                     <button class="view-project-btn">View project</button>
+                    </a>
+                </div>
 
-<div>
-  <lu>
-    <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\03-Technical-Documentation-Page\index.html">Technical Documentation Page</a></li>
-    <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\04-Product-Landing-Page\index.html">Product Landing page</a></li>
-    <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\05-Personal-Portfolio-Webpage\index.html">Personal Protfolio Webpage</a></li>
-  </lu>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Product Landing Page</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\04-Product-Landing-Page\index.html">
+                    <button class="view-project-btn">View project</button>
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Personal-Portfolio-Webpage</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\05-Personal-Portfolio-Webpage\index.html">
+                    <button class="view-project-btn">View project</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- ENLACES A PROYECTOS INDIVIDUALES
+   <ul>
+      <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\03-Technical-Documentation-Page\index.html">Technical Documentation Page</a></li>
+      <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\04-Product-Landing-Page\index.html">Product Landing page</a></li>
+      <li><a href="Portfolio\freeCodeCamp\Responsive-Web-Deign\05-Personal-Portfolio-Webpage\index.html">Personal Protfolio Webpage</a></li>
+   </ul>
 </div>
+-->
 
+<!-- INFORMACION DE EDUCACION Y CONTACTO
 <section>
   <h2>Education</h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies enim in eros elementum.</p>
@@ -64,3 +124,4 @@
 </section>
     </body>
     </html>
+  -->
