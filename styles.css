@@ -317,3 +317,169 @@
                 gap: 15px;
             }
         }
+        .section.light {
+  background-color: #f9fafc;
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.section-desc {
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+/* --- Grid principal --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Formulario de contacto --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+}
+
+/* --- Botón --- */
+.btn.primary {
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn.primary:hover {
+  background-color: #005fcc;
+  transform: translateY(-1px);
+}
+
+/* --- Tarjeta lateral (Información) --- */
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px 24px;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card h4 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: #222;
+  border-bottom: 2px solid #0077ff;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.card .muted {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.card a {
+  color: #0077ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Redes sociales */
+.card .socials {
+  margin-top: 14px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card .socials a {
+  background-color: #0077ff;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.card .socials a:hover {
+  background-color: #005fcc;
+  transform: scale(1.05);
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: #111827;
+  color: #d1d5db;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.site-footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
