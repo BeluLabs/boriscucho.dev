@@ -4,10 +4,24 @@
             box-sizing: border-box;
         }
 
+        :root {
+            /* Colores base */
+            --color-text: #333;
+            --color-muted: #666;
+            --color-bg: #f5f5f5;
+            --color-primary: #2563eb;
+            --color-primary-hover: #1d4ed8;
+            --color-accent: #0077ff;
+            --color-accent-hover: #005fcc;
+            --color-footer-bg: #111827;
+            --color-footer-link: #60a5fa;
+            --focus-outline: #93c5fd;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #333;
-            background: #f5f5f5;
+            color: var(--color-text);
+            background: var(--color-bg);
             line-height: 1.6;
         }
 
@@ -34,9 +48,9 @@
         }
 
         .logo {
-            font-size: 20px;
+            font-size: 1.25rem; /* 20px */
             font-weight: 700;
-            color: #333;
+            color: var(--color-text);
             flex: 0 0 auto;
         }
 
@@ -52,29 +66,42 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #666;
-            font-size: 14px;
+            color: var(--color-muted);
+            font-size: 0.875rem; /* 14px */
             transition: color 0.3s;
         }
 
         .nav-links a:hover {
-            color: #2563eb;
+            color: var(--color-primary);
+        }
+
+        .nav-links a:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 2px;
+            border-radius: 4px;
         }
 
         .cta-btn {
-            background: #2563eb;
+            background: var(--color-primary);
             color: white;
             padding: 10px 24px;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 0.875rem; /* 14px */
             transition: background 0.3s;
             flex: 0 0 auto;
         }
 
         .cta-btn:hover {
-            background: #1d4ed8;
+            background: var(--color-primary-hover);
         }
+
+    /* Accesibilidad: estados de foco visibles */
+    .cta-btn:focus-visible,
+    .view-project-btn:focus-visible {
+            outline: 3px solid var(--focus-outline); /* azul claro */
+      outline-offset: 2px;
+    }
 
         /* Sección Hero */
         .hero {
@@ -84,22 +111,22 @@
         }
 
         .hero h1 {
-            font-size: 48px;
+            font-size: 3rem; /* 48px */
             margin-bottom: 10px;
             color: #111;
         }
 
         .hero h2 {
-            font-size: 48px;
-            color: #2563eb;
+            font-size: 3rem; /* 48px */
+            color: var(--color-primary);
             margin-bottom: 20px;
         }
 
         .hero p {
-            color: #666;
+            color: var(--color-muted);
             max-width: 600px;
             margin: 0 auto;
-            font-size: 16px;
+            font-size: 1rem; /* 16px */
         }
 
         /* Secciones generales */
@@ -108,7 +135,7 @@
         }
 
         .section-title {
-            font-size: 32px;
+            font-size: 2rem; /* 32px */
             margin-bottom: 10px;
             text-align: center;
         }
@@ -155,17 +182,17 @@
         .project-icon svg {
             width: 30px;
             height: 30px;
-            stroke: #2563eb;
+            stroke: var(--color-primary);
         }
 
         .project-card h3 {
-            font-size: 20px;
+            font-size: 1.25rem; /* 20px */
             margin-bottom: 10px;
         }
 
         .project-card p {
-            color: #666;
-            font-size: 14px;
+            color: var(--color-muted);
+            font-size: 0.875rem; /* 14px */
             margin-bottom: 20px;
         }
 
@@ -181,18 +208,18 @@
             background: #f3f4f6;
             padding: 5px 12px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 0.75rem; /* 12px */
             color: #555;
         }
 
         .view-project-btn {
-            background: #2563eb;
+            background: var(--color-primary);
             color: white;
             padding: 12px 30px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 0.875rem; /* 14px */
             transition: background 0.3s;
             text-decoration: none;
             display: inline-block;
@@ -200,7 +227,7 @@
         }
 
         .view-project-btn:hover {
-            background: #1d4ed8;
+            background: var(--color-primary-hover);
         }
 
         /* Sección de precios */
@@ -231,19 +258,19 @@
         }
 
         .price-title {
-            font-size: 18px;
+            font-size: 1.125rem; /* 18px */
             font-weight: 600;
         }
 
         .price-amount {
-            font-size: 24px;
+            font-size: 1.5rem; /* 24px */
             font-weight: 700;
-            color: #2563eb;
+            color: var(--color-primary);
         }
 
         .price-currency {
-            font-size: 14px;
-            color: #666;
+            font-size: 0.875rem; /* 14px */
+            color: var(--color-muted);
         }
 
         .price-btn {
@@ -272,21 +299,21 @@
         }
 
         .education-content h3 {
-            font-size: 20px;
+            font-size: 1.25rem; /* 20px */
             margin-bottom: 10px;
         }
 
         .education-content p {
-            color: #666;
-            font-size: 14px;
+            color: var(--color-muted);
+            font-size: 0.875rem; /* 14px */
         }
 
         .year-badge {
-            background: #2563eb;
+            background: var(--color-primary);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: 0.75rem; /* 12px */
             font-weight: 600;
             white-space: nowrap;
         }
@@ -300,7 +327,7 @@
 
             .nav-links {
                 gap: 15px;
-                font-size: 12px;
+                font-size: 0.75rem; /* 12px */
             }
 
             .hero h1, .hero h2 {
@@ -317,17 +344,10 @@
                 gap: 15px;
             }
         }
-        .section.light {
-  background-color: #f9fafc;
-  padding: 80px 20px;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 10px;
-}
+    .section.light {
+        background-color: #f9fafc;
+      padding: 80px 20px;
+    }
 
 .section-desc {
   color: #666;
@@ -383,7 +403,7 @@
 
 /* --- Botón --- */
 .btn.primary {
-  background-color: #0077ff;
+    background-color: var(--color-accent);
   color: white;
   border: none;
   border-radius: 8px;
@@ -395,7 +415,7 @@
 }
 
 .btn.primary:hover {
-  background-color: #005fcc;
+    background-color: var(--color-accent-hover);
   transform: translateY(-1px);
 }
 
@@ -418,7 +438,7 @@
   margin-bottom: 12px;
   font-size: 1.2rem;
   color: #222;
-  border-bottom: 2px solid #0077ff;
+    border-bottom: 2px solid var(--color-accent);
   display: inline-block;
   padding-bottom: 4px;
 }
@@ -430,13 +450,24 @@
 }
 
 .card a {
-  color: #0077ff;
+    color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
 }
 
 .card a:hover {
   text-decoration: underline;
+}
+
+/* Lista de contacto en la tarjeta */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+}
+
+.contact-list li + li {
+    margin-top: 8px;
 }
 
 /* Redes sociales */
@@ -448,7 +479,7 @@
 }
 
 .card .socials a {
-  background-color: #0077ff;
+    background-color: var(--color-accent);
   color: #fff;
   padding: 8px 14px;
   border-radius: 8px;
@@ -457,13 +488,13 @@
 }
 
 .card .socials a:hover {
-  background-color: #005fcc;
+    background-color: var(--color-accent-hover);
   transform: scale(1.05);
 }
 
 /* --- Footer --- */
 .site-footer {
-  background-color: #111827;
+    background-color: var(--color-footer-bg);
   color: #d1d5db;
   padding: 24px 0;
   text-align: center;
@@ -471,7 +502,7 @@
 }
 
 .site-footer a {
-  color: #60a5fa;
+    color: var(--color-footer-link);
   text-decoration: none;
 }
 
