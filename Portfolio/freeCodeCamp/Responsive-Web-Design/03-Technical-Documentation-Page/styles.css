@@ -1,8 +1,8 @@
 * {
-    background-color: #aabbff;
+    background-color: #ffffff;
   }
   a {
-    color: #92869c;
+    color: #4548da;
   }
   a:hover {
     background-color: #92869c;
@@ -11,13 +11,13 @@
   #navbar {
     border-style: solid;
     border-width: 5px;
-    border-color: #92869c;
+    border-color: #000000;
     height: 100%;
     top: -5px;
     left: -3px;
     padding: 5px;
     text-align: center;
-    color: #92869c
+    color: #000000;
   }
   @media (min-width: 480px) {
     #navbar {
@@ -26,18 +26,18 @@
   }
   main {
     margin-left: 220px;
-    color: #92869c
+    color: #000000;
   }
   header {
     font-size: 20pt;
   }
   code {
-    background-color: #92869c;
+    background-color: #d5d835;
     border-style: dashed;
     border-width: 2px;
-    border-color: #92869c;
+    border-color: #e72727;
     padding: 5px;
-    color: black;
+    color: #000000;
   }
   footer {
     text-align: center;
