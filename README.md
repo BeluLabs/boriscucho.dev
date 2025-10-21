@@ -1,6 +1,6 @@
 # 🚀 Boris Cucho - Portfolio
 
-Personal portfolio website showcasing my projects and skills as a Backend Development Student.
+Personal website showcasing my projects and skills as a Backend Development Student.
 
 ## 🌐 Live Site
 
@@ -10,24 +10,13 @@ Personal portfolio website showcasing my projects and skills as a Backend Develo
 
 - 📱 Responsive design
 - 🎨 Modern UI with clean aesthetics
-- 📬 Secure contact form with Discord integration
-- 🔒 Protected webhook using Netlify Functions
 - ⚡ Fast loading and optimized performance
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Backend:** Netlify Functions (Serverless)
 - **Notifications:** Discord Webhooks
-- **Hosting:** Netlify
 - **Version Control:** Git & GitHub
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (for local development)
-- Netlify CLI (optional, for local testing)
-- Discord account (for webhook)
 
 ## 📫 Contact
 
