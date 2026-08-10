@@ -12,3 +12,7 @@ npm-debug.log*
 # Archivos temporales
 *.tmp
 *.temp
+
+# Cloudflare Wrangler (estado local / secretos de desarrollo)
+.wrangler/
+.dev.vars

@@ -11,8 +11,6 @@
             --color-bg: #f5f5f5;
             --color-primary: #2563eb;
             --color-primary-hover: #1d4ed8;
-            --color-accent: #0077ff;
-            --color-accent-hover: #005fcc;
             --color-footer-bg: #111827;
             --color-footer-link: #60a5fa;
             --focus-outline: #93c5fd;
@@ -404,13 +402,13 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #0077ff;
-  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 /* --- Botón --- */
 .btn.primary {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -422,7 +420,7 @@
 }
 
 .btn.primary:hover {
-    background-color: var(--color-accent-hover);
+    background-color: var(--color-primary-hover);
   transform: translateY(-1px);
 }
 
@@ -445,7 +443,7 @@
   margin-bottom: 12px;
   font-size: 1.2rem;
   color: #222;
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-primary);
   display: inline-block;
   padding-bottom: 4px;
 }
@@ -457,7 +455,7 @@
 }
 
 .card a {
-    color: var(--color-accent);
+    color: var(--color-primary);
   text-decoration: none;
   font-weight: 500;
 }
@@ -486,7 +484,7 @@
 }
 
 .card .socials a {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
   color: #fff;
   padding: 8px 14px;
   border-radius: 8px;
@@ -495,7 +493,7 @@
 }
 
 .card .socials a:hover {
-    background-color: var(--color-accent-hover);
+    background-color: var(--color-primary-hover);
   transform: scale(1.05);
 }
 
