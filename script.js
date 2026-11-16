@@ -1,68 +1,53 @@
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+// Año del footer
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ====================================
-// Discord Webhook - Formulario de Contacto
+// Formulario de contacto -> Cloudflare Worker -> Discord
 // ====================================
 
-// URL del Cloudflare Worker que reenvía el mensaje a Discord.
 const CONTACT_ENDPOINT = 'https://contact.boriscucho.workers.dev';
 
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
 
+function setStatus(text, type) {
+    formStatus.textContent = text;
+    formStatus.classList.remove('success', 'error');
+    if (type) formStatus.classList.add(type);
+}
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Obtener los valores del formulario
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Deshabilitar el botón mientras se envía
+
+        const data = Object.fromEntries(new FormData(contactForm));
+
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
-        formStatus.textContent = '';
-        formStatus.style.color = '';
-        
+        setStatus('');
+
         try {
-            // Enviar al Worker, que reenvía el mensaje a Discord
             const response = await fetch(CONTACT_ENDPOINT, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ name, email, message })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    message: data.message,
+                    website: data.website, // honeypot
+                }),
             });
 
-            if (response.ok) {
-                // Éxito
-                formStatus.textContent = '✓ Message sent successfully!';
-                formStatus.style.color = 'green';
-                contactForm.reset();
-            } else {
-                throw new Error('Error al enviar el mensaje');
-            }
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+            setStatus('✓ Message sent successfully!', 'success');
+            contactForm.reset();
         } catch (error) {
-            // Error
-            console.error('Error:', error);
-            formStatus.textContent = '✗ Error sending message. Please try again or contact me directly via email.';
-            formStatus.style.color = 'red';
+            console.error('Contact form error:', error);
+            setStatus('✗ Error sending message. Please try again or contact me directly via email.', 'error');
         } finally {
-            // Rehabilitar el botón
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send';
         }

@@ -4,19 +4,30 @@ Personal website showcasing my projects and skills as a Backend Development Stud
 
 ## 🌐 Live Site
 
-[boriscucho.dev](https://boriscucho.dev) 
+[boriscucho.dev](https://boriscucho.dev)
 
 ## ✨ Features
 
-- 📱 Responsive design
-- 🎨 Modern UI with clean aesthetics
-- ⚡ Fast loading and optimized performance
+- 📱 Responsive design with automatic dark mode
+- ♿ Accessible (visible focus states, live form status, reduced-motion support)
+- 📬 Contact form backed by a serverless API (Cloudflare Worker → Discord)
+- 🛡️ Spam protection (honeypot, origin check, input validation) with the webhook kept as a secret
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+- **Backend:** Cloudflare Workers ([`cloudflare-worker/`](cloudflare-worker/))
 - **Notifications:** Discord Webhooks
-- **Version Control:** Git & GitHub
+- **Hosting:** GitHub Pages (custom domain)
+
+## 📁 Structure
+
+```
+├── index.html            # Single-page site
+├── styles.css            # Styles (light/dark tokens)
+├── script.js             # Contact form logic
+└── cloudflare-worker/    # Contact API (see its README for deploy steps)
+```
 
 ## 📫 Contact
 
@@ -26,8 +37,4 @@ Personal website showcasing my projects and skills as a Backend Development Stud
 
 ## 📄 License
 
-© 2025 Boris Cucho - All rights reserved
-
----
-
-Made with ❤️ by Boris Cucho
+© Boris Cucho - All rights reserved

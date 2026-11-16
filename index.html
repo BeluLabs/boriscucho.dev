@@ -1,95 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-      <meta name="description" content="Boris Cucho - Backend Development Student portfolio and projects.">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
-        <title>Student</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boris Cucho — Backend Developer</title>
+  <meta name="description" content="Boris Cucho — Backend development student. Portfolio, projects and contact.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://boriscucho.dev/">
 
-    <!-- Menu incial y enlaces--> 
-    <body>
-      <header>
-       <nav class="container">
-          <div>My First Web</div>
-            <ul class="nav-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="https://belulabs.github.io/Portfolio/">Portfolio</a></li>
-            </ul>
-            <a href="#contact" class="cta-btn">Let's Talk</a>
-       </nav>   
-      </header>
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boriscucho.dev/">
+  <meta property="og:title" content="Boris Cucho — Backend Developer">
+  <meta property="og:description" content="Backend development student. Portfolio, projects and contact.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Boris Cucho — Backend Developer">
+  <meta name="twitter:description" content="Backend development student. Portfolio, projects and contact.">
 
-    <!-- Presentación inicial-->
-     <main>
-<section class="hero" id="home">
-          <div class="container">
-           <h1>Boris Cucho</h1>
-           <h2>Backend Development Student</h2>
-           <p>Hi, I built this website entirely with HTML and CSS. 
-            I'm a self-taught web development student currently enrolled in the Oracle Next Education program with Alura Latam.</p>
-          </div>
-</section>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
 
-<!-- Portfolio Section -->
-<section class="section" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">My latest projects</h2>
-            <p class="section-subtitle">For now, I work with HTML, CSS, and JavaScript, but I'll soon be sharing projects built with new languages and technologies.</p>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Survey Form</h3>
-                    <p>FreeCodeCamp Project</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/01-Survey-Form/index.html">View project</a>
-                </div>
+<body>
+  <header>
+    <nav class="container" aria-label="Main">
+      <a href="#home" class="logo">Boris Cucho</a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://belulabs.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+      </ul>
+      <a href="#contact" class="cta-btn">Let's Talk</a>
+    </nav>
+  </header>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Tribute Page</h3>
-                    <p>FreeCodeCamp Project</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/02-Tribute-Page/index.html">View project</a>                                                                                                                           
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3>Technical Documentation Page</h3>
-                    <p>FreeCodeCamp Project</p>
-                    <div class="tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/03-Technical-Documentation-Page/index.html">View project</a>                                                                                                                                   
-                </div>
-            </div>
-            <p class="section-subtitle-portfolio">If you want to see more projects, visit my <a href="https://belulabs.github.io/Portfolio/">portfolio</a>.</p>
-        </div>
+  <main>
+    <!-- Presentación -->
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Boris Cucho</h1>
+        <h2>Backend Development Student</h2>
+        <p>I'm a self-taught developer from the Oracle Next Education program with Alura Latam.
+          This site is plain HTML, CSS and JavaScript, with a serverless Cloudflare Worker handling the contact form.</p>
+      </div>
     </section>
 
+    <!-- Proyectos -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">My latest projects</h2>
+        <p class="section-subtitle">From front-end fundamentals to serverless back-end work.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+              </svg>
+            </div>
+            <h3>Serverless Contact API</h3>
+            <p>Cloudflare Worker that validates contact-form submissions, enforces CORS and forwards them to Discord, keeping the webhook as a secret.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Cloudflare Workers</span>
+              <span class="tag">REST</span>
+            </div>
+            <a class="view-project-btn" href="https://github.com/BeluLabs/boriscucho.dev/tree/main/cloudflare-worker" target="_blank" rel="noopener noreferrer">View code</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3>Survey Form</h3>
+            <p>freeCodeCamp project</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/01-Survey-Form/index.html" target="_blank" rel="noopener noreferrer">View project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3>Tribute Page</h3>
+            <p>freeCodeCamp project</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/02-Tribute-Page/index.html" target="_blank" rel="noopener noreferrer">View project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13C10.832 18.477 9.246 18 7.5 18S4.168 18.477 3 19.253v-13C4.168 5.477 5.754 5 7.5 5s3.332.477 4.5 1.253zm0 0C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3>Technical Documentation Page</h3>
+            <p>freeCodeCamp project</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+            <a class="view-project-btn" href="https://belulabs.github.io/Responsive-Web-Design__freeCodeCamp/03-Technical-Documentation-Page/index.html" target="_blank" rel="noopener noreferrer">View project</a>
+          </article>
+        </div>
+        <p class="section-subtitle-portfolio">Want to see more? Visit my <a href="https://belulabs.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">portfolio</a>.</p>
+      </div>
+    </section>
+
+    <!-- Contacto -->
     <section id="contact" class="section light">
       <div class="container contact-grid">
         <div>
@@ -99,56 +128,45 @@
           <form class="contact-form" id="contactForm">
             <label>
               Name
-              <input type="text" name="name" id="name" placeholder="Your name" required>
+              <input type="text" name="name" id="name" placeholder="Your name" autocomplete="name" maxlength="100" required>
             </label>
             <label>
               E-mail
-              <input type="email" name="email" id="email" placeholder="your@email.com" required>
+              <input type="email" name="email" id="email" placeholder="your@email.com" autocomplete="email" maxlength="200" required>
             </label>
             <label>
               Message
-              <textarea name="message" id="message" rows="4" placeholder="Tell me about your project" required></textarea>
+              <textarea name="message" id="message" rows="4" placeholder="Tell me about your project" maxlength="2000" required></textarea>
             </label>
+            <!-- Honeypot anti-spam: invisible para personas, los bots lo llenan -->
+            <div class="hp" aria-hidden="true">
+              <label>Website <input type="text" name="website" id="website" tabindex="-1" autocomplete="off"></label>
+            </div>
             <div>
               <button class="btn primary" type="submit" id="submitBtn">Send</button>
             </div>
-            <div id="formStatus" style="margin-top: 1rem; font-weight: bold;"></div>
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
         <aside>
           <div class="card">
-            <h4>Information</h4>
+            <h3>Information</h3>
             <ul class="contact-list">
               <li>Email: <a href="mailto:boris.cucho@outlook.com.pe">boris.cucho@outlook.com.pe</a></li>
-              <li>LinkedIn: <a href="https://www.linkedin.com/in/boris-cucho/" aria-label="linkedin profile" target="_blank" rel="noopener noreferrer">@boris-cucho</a></li>
-              <li>GitHub: <a href="https://github.com/BeluLabs" aria-label="github profile" target="_blank" rel="noopener noreferrer">@BeluLabs</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/boris-cucho/" target="_blank" rel="noopener noreferrer">@boris-cucho</a></li>
+              <li>GitHub: <a href="https://github.com/BeluLabs" target="_blank" rel="noopener noreferrer">@BeluLabs</a></li>
             </ul>
-            
           </div>
         </aside>
       </div>
     </section>
-          <footer class="site-footer">
-    <div class="container">
-      <div>© <span id="year"></span> Boris Cucho — All rights reserved</div>
-    </div>
-  </footer>
-
   </main>
 
-    <script>
-    // pequeño script para el año y menú móvil
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const toggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('open');
-      });
-    }
-  </script>
-
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Boris Cucho — All rights reserved</p>
+    </div>
+  </footer>
 </body>
-    </html>
+</html>
