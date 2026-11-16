@@ -49,6 +49,12 @@ export default {
       return jsonResponse({ error: 'Invalid JSON' }, 400, origin);
     }
 
+    // Honeypot: un humano nunca llena este campo oculto. Fingimos éxito
+    // para que el bot no sepa que fue descartado.
+    if (body.website) {
+      return jsonResponse({ ok: true }, 200, origin);
+    }
+
     const name = String(body.name || '').trim().slice(0, 100);
     const email = String(body.email || '').trim().slice(0, 200);
     const message = String(body.message || '').trim().slice(0, 2000);
@@ -57,15 +63,23 @@ export default {
       return jsonResponse({ error: 'Datos inválidos' }, 400, origin);
     }
 
+    if (!env.DISCORD_WEBHOOK_URL) {
+      console.error('DISCORD_WEBHOOK_URL no está configurado');
+      return jsonResponse({ error: 'Servicio no disponible' }, 500, origin);
+    }
+
     const discordPayload = {
+      // Nunca notificar @everyone/@here/roles aunque vengan en el texto
+      allowed_mentions: { parse: [] },
       embeds: [
         {
           title: '📬 Nuevo mensaje de contacto',
           color: 3447003,
+          // El mensaje va en description (límite 4096); los fields solo aceptan 1024
+          description: message,
           fields: [
             { name: '👤 Nombre', value: name, inline: true },
             { name: '📧 Email', value: email, inline: true },
-            { name: '💬 Mensaje', value: message, inline: false },
           ],
           timestamp: new Date().toISOString(),
           footer: { text: 'Formulario de contacto - boriscucho.dev' },
@@ -73,13 +87,20 @@ export default {
       ],
     };
 
-    const discordResponse = await fetch(env.DISCORD_WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(discordPayload),
-    });
+    let discordResponse;
+    try {
+      discordResponse = await fetch(env.DISCORD_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(discordPayload),
+      });
+    } catch (err) {
+      console.error('Error de red hacia Discord:', err);
+      return jsonResponse({ error: 'No se pudo enviar el mensaje' }, 502, origin);
+    }
 
     if (!discordResponse.ok) {
+      console.error('Discord respondió', discordResponse.status, await discordResponse.text());
       return jsonResponse({ error: 'No se pudo enviar el mensaje' }, 502, origin);
     }
 

@@ -22,9 +22,12 @@ nunca queda en el código del sitio.
 
 ## Notas
 
-- Este Worker ya viene revocado/desactivado hasta que le asignes el secreto
-  `DISCORD_WEBHOOK_URL` — sin él, cualquier request devuelve error 500 al
-  intentar hacer fetch a `undefined`.
+- Sin el secreto `DISCORD_WEBHOOK_URL` el Worker responde 500
+  ("Servicio no disponible") y lo registra en los logs (`wrangler tail`).
+- El formulario incluye un campo honeypot (`website`): si llega con valor,
+  el Worker responde 200 pero descarta el mensaje.
+- El mensaje se envía en la `description` del embed (límite 4096) porque los
+  `fields` de Discord solo aceptan 1024 caracteres.
 - El webhook de Discord original que estaba hardcodeado en `script.js` está
   comprometido (quedó en el historial de git público) y debe regenerarse en
   Discord antes de usarlo aquí.
